@@ -22,7 +22,7 @@ namespace zipnaro
             _pathZip = pathZip;
             _pathTemp = $"{_pathZip}.tmp";
             var dirName = Path.GetDirectoryName(_pathZip) ?? string.Empty;
-            if (dirName == string.Empty)
+            if (dirName != string.Empty)
             {
                 Directory.CreateDirectory(dirName);
             }
